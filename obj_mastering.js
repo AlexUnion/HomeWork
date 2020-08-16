@@ -36,25 +36,6 @@ const users = [
     },
 ];
 
-function reversed(obj) {
-    const reversedObj = Object.entries(obj).reduce((reversed, entries) => {
-        const key = entries[0];
-        const val = entries[1];
-
-        reversed[val] = key;
-
-        return reversed;
-    }, {});
-
-    return reversedObj;
-}
-
-const rev = users.map()
-
-const reversedUsers = users.reduce((result, users) => {
-
-}, []);
-
 users.forEach((item, idx) => {
     item.index = idx;
 });
@@ -64,7 +45,7 @@ const counter = users.reduce(whoIsMore, {
     female: 0
 });
 
-function whoIsMore(previous, current, i, arr) {
+function whoIsMore(previous, current) {
     if (current.isMale) {
         previous.male++;
     } else {
