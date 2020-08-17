@@ -94,22 +94,3 @@ function reverseObj(object) {
 }
 
 console.log(newObject);
-
-//это не относиться к заданию
-function congratulate(user) {
-
-    const date = user.date.split('.');
-
-    const lessThanWeek = new Date(+date[2], +date[1], +date[0]);
-
-    const now = new Date();
-
-    if (lessThanWeek.getMonth() === now.getMonth() + 1) {
-        const temp = now.getDate() - lessThanWeek.getDate();
-        if (temp >= 0 && temp <= 7) {
-            console.log(`\nHappy birthday to ${user.name} :)`);
-        }
-    }
-}
-
-congratulate(users[0]);
