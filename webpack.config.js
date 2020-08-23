@@ -39,7 +39,11 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'), //source of static assets
-    port: 3000
+    port: 3000,
+    overlay: {
+      warnings: true,
+      errors: true
+    }
   },
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
